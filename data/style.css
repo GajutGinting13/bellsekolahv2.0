@@ -1,0 +1,111 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0 0 100px 0;
+    background-color: #e5e5e5;
+    padding: 0;
+    min-height: 120vh;
+    position: relative;
+}
+html{
+    height: 100%;
+}
+.head{
+    text-align: end;
+    background-color: #003049;
+    height: 40px;
+}
+.btn-logout{
+    height: 30px;
+    width: 100px;
+    background-color: #fdf0d5;
+    margin: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-weight: bold;
+}
+.container{
+    background-color: #a8dadc;
+}
+.waktu-real{
+    background-color: #003049;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#clock, #hari{
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+.btn-waktu{
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+.custom-w{
+    height: 50px;
+    width: 48%;
+    margin-top: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+.setting-hari{
+    text-align: center;
+}
+.btn-hari{
+    height: 60px;
+    width: 48%;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: #eb5e28;
+    color: white;
+    letter-spacing: 3px;
+}
+footer{
+    background-color: #2b2d42;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.setting-jadwal{
+    margin: 0 0 0 20px;
+}
+.waktu{
+    width: 10%;
+    margin: 0 0 0 23px;
+}
+.form{
+    width: 60%;
+    height: 30px;
+    padding: 5px;
+    margin: 10px 0 10px 20px;
+}
+.tombol{
+    height: 30px;
+    width: 100px;
+    margin-top: 20px;
+    background-color: rgb(83, 177, 83);
+    color: white;
+}
+.hapus{
+    height: 30px;
+    width: 100px;
+    margin-left: 20px;
+    background-color: red;
+    color: white;
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td{
+    border: 1px solid black;
+    padding: 8px;
+}

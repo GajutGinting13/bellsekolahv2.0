@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Bell Sekolah</title>
+</head>
+<style>
+    body{
+        background-color: #8ecae6; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 700px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight: bold;
+    }
+    .box{
+        height: 320px;
+        width: 300px;
+        background-color: white;
+        border-radius: 5px;
+    }
+    .contain{
+        margin: 20px;
+        padding: 20px;
+    }
+    .a{
+        margin-top: 20px;
+        width: 100%;
+        height: 30px;
+        border: 2px solid #f1faee;
+        color: blue;
+    }
+    .a:focus{
+        border: 2px solid #06d6a0;
+        border-radius: 3px;
+    }
+    .btn{
+        background-color: #06d6a0;
+        color: #1d2d44;
+        font-weight: bold;
+        letter-spacing: 5px;
+        border-radius: 7px;
+    }
+</style>
+<body>
+    <div class="box">
+        <h2 style="text-align: center;letter-spacing: 5px;">LOGIN</h2>
+        <div class="contain">
+                <input type="text" placeholder="Username" class="a" id="user">
+                <input type="password" placeholder="Password" class="a" id="pass">
+                <button type="submit" class="a btn" onclick="validasi();">MASUK</button>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function validasi(){
+            var user = document.getElementById('user').value;
+            var pass = document.getElementById('pass').value;
+            if (user === "Admin" && pass === "admin123"){
+                alert('Berhasil Masuk');
+                window.location.href = "home.html";
+                sessionStorage.setItem("sesson", "1");
+            }else{
+                alert('Username Atau Password Anda Salah');
+                sessionStorage.setItem("sesson", "0");
+            }
+        }
+    </script>
+</body>
+</html>

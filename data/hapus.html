@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Senin</title>
+</head>
+
+<body>
+    <div class="head">
+        <a href="home.html"><button class="btn-logout">Home</button></a>
+    </div>
+    <div class="contain">
+        <h3 style="margin-left: 20px;">Hapus Jadwal</h3>
+        <hr>
+        <div class="setting-jadwal">
+            <form method="GET">
+                <label><b>Hari</b></label>
+                <br>
+                <select name="hari" id="id" style="width: 100px; padding: 5px;">
+                    <option value="senin">Senin</option>
+                    <option value="selasa">Selasa</option>
+                    <option value="rabu">Rabu</option>
+                    <option value="kamis">Kamis</option>
+                    <option value="jumat">Jumat</option>
+                    <option value="sabtu">Sabtu</option>
+                </select>
+                <input type="text" name="audio" id="audio" style="width: 50px; padding: 5px;" placeholder="001" maxlength="3">
+                <button id="btn" class="hapus" type="submit">Hapus</button>
+            </form>
+            <div class="catatan">
+                <p>Catatan:<br>- Harap Isi Data Dengan Benar <span style="color: red;">*</span><br>- Di coloum 1 isi hari dan di coloum 2 isi audio yang ingin di hapus <span style="color: red;">*</span></p>
+            </div>
+        </div>
+        <hr style="margin-top: 20px;">
+    </div>
+    <footer>
+        <p>Copyright &copy; <span id="copyright"></span> / Gajut Ginting</p>
+    </footer>
+</body>
+
+</html>

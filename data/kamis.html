@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Kamis</title>
+</head>
+<body>
+    <div class="head">
+        <a href="home.html"><button class="btn-logout">Home</button></a>
+    </div>
+    <div class="contain">
+        <h3 style="margin-left: 20px;">KAMIS</h3>
+        <hr>
+        <div class="setting-jadwal">
+            <form method="GET">
+                <label><b>Jadwal :</b></label>
+                <br>
+                <input type="hidden" name="hari" value="kamis">
+                <input type="text" name="id" id="id" maxlength="10" style="width: 120px; padding: 5px;" placeholder="Name">
+                <input type="number" name="audio" id="audio" style="width: 50px; padding: 5px;" min="1" max="999" placeholder="1-999">
+                <input type="time" name="waktu" id="waktu" style="padding: 2px;">
+                <br>
+                <button id="btn" class="tombol" type="submit">Kirim</button>
+            </form>
+        </div>
+        <hr style="margin-top: 20px;">
+        <form action="" method="GET">
+            <a href="list.html" style="width: 100px;height: 30px; text-align: center; background-color: #219ebc; display: inline-block; text-decoration: none; color: white;margin-left: 10px;border-radius: 5px;"><b>List</b></a>
+            <a href="hapus.html" style="width: 100px;height: 30px; text-align: center; background-color: red; display: inline-block; text-decoration: none; color: white;margin-left: 10px;border-radius: 5px;"><b>Hapus</b></a>
+        </form>
+    </div>
+    <footer>
+        <p>Copyright &copy; <span id="copyright"></span> / Gajut X Elektronika</p>
+    </footer>
+    <script src="js.js"></script>
+    <script>
+        var id = document.getElementById('id');
+        var jam = document.getElementById('waktu');
+        var audio = document.getElementById('audio');
+        var tombol = document.getElementById('btn');
+        tombol.style.display = 'none';
+        jam.addEventListener('change', function(){
+            if(id.value != '' && jam.value != '' && audio.value){
+            tombol.style.display = 'block';
+            }
+        });
+        var waktu = updateClock();
+        document.getElementById('copyright').textContent = waktu.tahun;
+    </script>
+</body>
+</html>

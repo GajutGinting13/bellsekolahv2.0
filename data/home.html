@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js.js"></script>
+</head>
+<body>
+    <div class="head">
+        <button onclick="logout();" class="btn-logout">LOGOUT</button>
+    </div>
+    <div class="container">
+        <div class="judul">
+            <h1 style="margin: 0 20px;padding-top: 80px;">Selamat Datang</h1>
+            <h4 style="margin: 0 40px;padding-bottom: 80px;">Aplikasi Bell Sekolah Otomatis</h4>
+        </div>
+    </div>
+    <div class="contain">
+        <div class="waktu-real">
+            <div id="hari" style="margin-right: 10px;"></div>
+            <div id="clock"></div>
+        </div>
+        <div class="aksi-waktu" style="text-align: center;">
+            <form method="get">
+                <button class="btn-waktu" onclick="ubah(1);" style="margin-top: 10px;" name="waktu-sekarang" id="ubah-waktu">Set Waktu Sekarang</button>
+            </form>
+            <form method="get">
+                <input type="time" id="waktu-custom" class="custom-w">
+            <button onclick="ubah(2)" class="custom-w" id="custom-time" name="waktu-sekarang">Custom Waktu</button>
+            </form>
+        </div>
+        <hr>
+        <div class="setting-hari">
+            <a href="senin.html"><button class="btn-hari">Senin</button></a>
+            <a href="selasa.html"><button class="btn-hari">Selasa</button></a>
+            <a href="rabu.html"><button class="btn-hari">Rabu</button></a>
+            <a href="kamis.html"><button class="btn-hari">Kamis</button></a>
+            <a href="jumat.html"><button class="btn-hari">Jum'at</button></a>
+            <a href="sabtu.html"><button class="btn-hari">Sabtu</button></a>
+            <a href="list.html"><button class="btn-hari" style="background-color: rgb(99, 230, 56);">List Jadwal</button></a>
+            <a href="home.html?test=1"><button class="btn-hari" style="background-color: rgb(121, 121, 236);">Test Suara</button></a>
+        </div>
+    </div>
+    <footer>
+        <p>Copyright &copy; <span id="copyright"></span> / Gajut X Elektronika</p>
+    </footer>
+    <script>
+        var a = updateClock();
+        setInterval(updateClock, 1000);
+        document.getElementById("hari").textContent = a.hari;
+        document.getElementById('copyright').textContent = a.tahun;
+        function ubah(a){
+            var waktu = updateClock();
+            if (a == 2){
+                var hasil = konversiKeFormat24Jam('waktu-custom');
+                document.getElementById('custom-time').value = waktu.tahun + ',' + waktu.bulan + ',' + waktu.tanggal + ',' +  hasil.jam + ',' + hasil.menit + ',' + '00';
+            }else{
+                document.getElementById('ubah-waktu').value = waktu.tahun + ',' + waktu.bulan + ',' + waktu.tanggal + ',' +  waktu.jam + ',' + waktu.menit + ',' + waktu.detik;
+            }
+        }
+    </script>
+</body>
+
+</html>
